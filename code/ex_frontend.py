@@ -1,4 +1,4 @@
-from sqlalchmey.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker
 from project_orm import UserInput,Prediction
 from sqlalchemy import create_engine
 import streamlit as st
@@ -14,19 +14,19 @@ area = st.number_input('enter house area in sqft',
                         min_value=100,
                         value=400)
 
-rooms = st.numbver_input('enter house area in sqft',
+rooms = st.number_input('enter house area in sqft',
                         max_value=50,
                         min_value=1,
                         value=3)
 
-age = st.numbver_input('enter house area in sqft',
+age = st.number_input('enter house area in sqft',
                         max_value=50,
                         min_value=0,
                         value=1)
 
-location st.text_are('enter location address')
+location = st.text_area('enter location address')
 
-submit st.button('make predictions')
+submit = st.button('make predictions')
 
 if submit and location:
     #st.write('we got input')
